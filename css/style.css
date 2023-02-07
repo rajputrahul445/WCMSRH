@@ -47,7 +47,9 @@ input, button { outline: none !important; box-shadow: none;  }
     color: #fff;
     font-size: 13px;
 }
-
+.topHeader li a:hover{
+    text-decoration: underline;
+}
 .topHeader .contactList i {
     color: #f08174;
 }
@@ -128,7 +130,20 @@ nav#mainNav .nav-item > i {
     font-size: 14px;
     position: relative;
 }
-
+.mainNavList li a:before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #fff;
+    transition: all 500ms ease;
+}
+.mainNavList li a:hover:before{
+    width: 100%;
+    transition: all 500ms ease;
+}
 .mainNavList li a:after {
     content: "";
     height: 100%;
@@ -214,6 +229,7 @@ nav#mainNav .nav-item > i {
     color: #fff;
     padding: 10px 40px;
     box-shadow: 0 0 0px #00000036;
+    border: solid 1px #9D191D;
 }
 
 .btnRed:hover {
@@ -343,11 +359,11 @@ nav#mainNav .nav-item > i {
 
 .facilitieBx img {
     width: 100px;
-    transform: rotate(0deg);
+    transform: scale(1);
     transition: all 500ms ease;
 }
 .facilitieBx:hover > img {
-    transform: rotate(360deg);
+    transform: scale(1.1);
     transition: all 500ms ease;
 }
 .facilitieBx h3 {
@@ -356,7 +372,9 @@ nav#mainNav .nav-item > i {
     margin: 15px 0 10px;
     font-weight: 700;
 }
-
+.facilitieBx:hover h3{
+    color: #9D191D;
+}
 .admissionBannerBx {
     display: flex;
     align-items: center;
@@ -703,7 +721,9 @@ nav#mainNav .nav-item > i {
     font-size: 13px;
     line-height: 1.7;
 }
-
+.fLists li a:hover{
+    text-decoration: underline;
+}
 .subList {
     padding-left: 10px;
     list-style-type: none;
