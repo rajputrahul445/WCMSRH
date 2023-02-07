@@ -1,0 +1,721 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+body {font-family: 'Inter', sans-serif;background: #fff;overflow: auto;font-size: 14px;overflow-x: hidden;padding-top: 166px;}
+a, a:hover, a:focus {  text-decoration: none;  transition: all 400ms ease; }
+img{max-width: 100%}
+/* h1, h2, h3, h4, h5, h6 { font-weight: 700; } */
+input, button { outline: none !important; box-shadow: none;  }
+
+.mobile{display: none !important;}
+.mainHeader {
+    background: #fff;
+    /* box-shadow: 0 0 10px; */
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 400ms ease;
+}
+.mainHeader.fixedHeader {
+    top: -41px;
+    transition: all 400ms ease;
+    box-shadow: 0 0 10px #0000002e;
+}
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+    align-items: center;
+    background: #041C32;
+}
+.listInline {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 10px;
+}
+.gap20{
+    gap: 20px;
+}
+.topHeader p a {
+    color: #333;
+    font-weight: 500;
+}
+.topHeader li a, .topHeader li {
+    color: #fff;
+    font-size: 13px;
+}
+
+.topHeader .contactList i {
+    color: #f08174;
+}
+.logInBtn a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1E1E1E;
+}
+
+.contactList li:first-child {
+    padding-right: 10px;
+}
+nav#mainNav {
+    background: rgb(14,33,74);
+    background: linear-gradient(0deg, rgba(14,33,74,1) 0%, rgba(26,45,84,1) 47%, rgba(36,58,107,1) 74%, rgba(38,68,132,1) 100%);
+    padding: 0 15px;
+}
+.navbar-brand img {
+    max-height: 45px;
+}
+
+li.menu-item a {
+    color: #fff;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+}
+
+li.menu-item a:hover {
+    background: #ed4834;
+}
+
+nav#mainNav .nav-item > a {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 26px 0px;
+    position: relative;
+}
+nav#mainNav .nav-item > a:hover {
+    color: #ed4934;
+}
+nav#mainNav .nav-item {
+    padding: 0 15px;
+}
+
+.dropMenu:hover .dropMenuWrp {
+    opacity: 1;
+    top: 100%;
+    z-index: 9;
+    transition: all 500ms ease;
+    visibility: visible;
+}
+nav#mainNav .nav-item > i {
+    position: absolute;
+    right: 5px;
+    top: 33px;
+}
+.mainNav {
+    background: #9D191D;
+    border-bottom: solid 5px #fff;
+}
+
+.mainNavList {
+    margin: 0;
+    padding: 15px 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainNavList li a {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+}
+
+.mainNavList li a:after {
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: #fff;
+    position: absolute;
+    right: -18px;
+    top: 0px;
+}
+
+.mainNavList li:last-child a:after {
+    display: none;
+}
+.slideScroller .item{
+    overflow: hidden;
+}
+.slideScroller .item > img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.slideScroller .item .container {
+    position: relative;
+}
+
+.bannerContent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    background: url(../images/banner-bg.png) 0 0 no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.bannerContent .d-block{
+    position: relative;
+    z-index: 5;
+}
+.bannerContent:before {
+    content: "";
+    /* background: url(../images/banner-bg-left.png) 0 0 repeat; */
+    background: #22345B;
+    background-size: cover;
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+}
+.bannerContent:after {
+    content: "";
+    width: 200px;
+    height: calc(100% + 120px);
+    position: absolute;
+    right: -120px;
+    top: -70px;
+    background: #22345B;
+    /* background: url(../images/banner-bg-left.png) 0 0 repeat; */
+    background-size: cover;
+    transform: rotate(12deg);
+    z-index: 1;
+}
+.bannerContent h1 {
+    font-weight: 600;
+    font-size: 44px;
+    color: #fff;
+    margin: 0;
+}
+
+.bannerContent p {
+    margin: 30px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.btnRed {
+    display: inline-flex;
+    background: #9D191D;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 40px;
+    box-shadow: 0 0 0px #00000036;
+}
+
+.btnRed:hover {
+    color: #9D191D;
+    background: #fff;
+    box-shadow: 0 0 10px #00000036;
+}
+.sliderBanner .owl-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.sliderBanner {
+    position: relative;
+}
+
+.sliderBanner .owl-dots {
+    position: absolute;
+    left: 7%;
+    bottom: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.sliderBanner .owl-dots button {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid 1px #fff;
+    border-radius: 50%;
+}
+
+.sliderBanner .owl-nav img {
+    max-width: 100px;
+}
+
+.sliderBanner .owl-dots .active {
+    background: #fff;
+}
+
+.aboutUs {
+    padding: 60px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+.abtShape {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: -180px;
+}
+.abtShape2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.abtShape2 img {
+    width: 520px;
+}
+.aboutUs .container {
+    position: relative;
+    z-index: 1;
+}
+
+.abtShape img {
+    width: 300px;
+}
+.sectionHeading h3 {
+    margin: 0;
+    display: inline;
+    position: relative;
+    font-size: 14px;
+}
+
+.sectionHeading h3:after {
+    content: "";
+    width: 60px;
+    height: 6px;
+    background: #22345B;
+    position: absolute;
+    right: -70px;
+    top: 5px;
+}
+
+.sectionHeading h2 {
+    font-size: 37px;
+    color: #22345B;
+    font-weight: 700;
+}
+
+.para {
+    font-size: 14px;
+    color: #343434;
+}
+
+.aboutUsContent ul {
+    margin: 0 0 20px;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.aboutUsContent ul a {
+    color: #151515;
+    font-weight: 600;
+}
+
+.facilities {
+    background: #F4F8FF;
+    padding: 50px 0;
+}
+
+.facilitiesList {
+    display: flex;
+    gap: 30px;
+}
+
+.facilitieBx {
+    width: calc(100%/5 - 15px);
+}
+
+.facilitieBx img {
+    width: 100px;
+    transform: rotate(0deg);
+    transition: all 500ms ease;
+}
+.facilitieBx:hover > img {
+    transform: rotate(360deg);
+    transition: all 500ms ease;
+}
+.facilitieBx h3 {
+    color: #22345B;
+    font-size: 18px;
+    margin: 15px 0 10px;
+    font-weight: 700;
+}
+
+.admissionBannerBx {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 50px;
+    background: #E8E8E8;
+    border-radius: 10px;
+    padding-right: 50px;
+    overflow: hidden;
+}
+
+.admissionBannerBx > img {
+    height: 130px;
+}
+
+.admissionBannerBx h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.admissionBannerBx h2 {
+    font-size: 26px;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #343434;
+    margin: 0;
+}
+
+.admissionBannerBx p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.admissionBannerBx .btnRed {
+    white-space: nowrap;
+}
+.admissionThumb {
+    position: relative;
+}
+
+.admissionThumbContent {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background: #000000ad;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 95px;
+    transition: all 500ms ease;
+}
+.admissionThumb:hover .admissionThumbContent {
+    height: 100%;
+    transition: all 500ms ease;
+}
+.admissionThumbContent img {
+    width: 60px;
+}
+
+.admissionThumbContent h3 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.quickLinks .container-fluid {
+    display: flex;
+    gap: 20px;
+}
+
+.quickLinksLists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quickLinkBx {
+    width: calc(100% / 5 - 20px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quickLinkBx img {
+    width: 70px;
+    transform: scale(1);
+    transition: all 500ms ease;
+}
+.quickLinkBx:hover img {
+    transform: scale(1.1);
+    transition: all 500ms ease;
+}
+
+.quickLinkBx h3, .quickLinkBx h3 a {
+    font-size: 15px;
+    color: #151515;
+    margin: 0;
+    text-transform: capitalize;
+}
+.quickLinkBx:hover h3, .quickLinkBx:hover h3 a{
+    color: #9D191D;
+}
+.quickLinkBx h2 {
+    font-size: 26px;
+    border-bottom: 5px solid #22345B;
+    padding-bottom: 5px;
+}
+
+.quickLinks {
+    margin: 50px 0;
+    border-top: solid 2px #E8E8E8;
+    border-bottom: solid 2px #E8E8E8;
+}
+
+.latest {
+    background: #F4F8FF;
+    padding: 50px 0;
+    position: relative;
+}
+.lateestShape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.lateestShape img {
+    height: 350px;
+}
+.latest h2, .gallery h2 {
+    font-size: 32px;
+    color: #22345B;
+    padding: 0 0 10px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.newsBx {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 20px;
+}
+
+.newsThumb img {
+    width: 80px !important;
+    min-width: 80px;
+}
+
+.newsContent h5 {
+    font-size: 14px;
+    color: #9D191D;
+    font-weight: 600;
+    margin: 0;
+}
+
+.newsContent p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.latestNews .owl-nav {
+    position: absolute;
+    top: -64px;
+    right: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.latestNews .owl-nav img {
+    width: 30px;
+}
+
+.updates {
+    padding: 40px;
+    background: linear-gradient(153.65deg, #22345B 13.73%, #294582 50.04%, #112654 83.44%);
+    border-radius: 20px;
+    color: #fff;
+}
+
+.updates .owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.updateBx p {
+    margin: 0 0 50px;
+}
+
+.updates .owl-nav img {
+    width: 30px;
+}
+.preparingStudents {
+    background: #22345B;
+}
+
+.preparingStudents h3, .preparingStudents h2, .preparingStudents p {
+    color: #fff;
+}
+.testimonial{
+    position: relative;
+}
+.testimonialShape1, .testimonialShape2{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 0;
+}
+.testimonialShape2{
+    left: auto;
+    right: 0;
+}
+.testimonialShape1 img, .testimonialShape2 img{
+    height: 200px;
+}
+.testimonialContent p {
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.testimonialContent p b {
+    font-style: normal;
+}
+
+.testimonialContent {
+    padding-top: 20px;
+}
+
+.testimonial .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    width: calc(100% + 70px);
+}
+
+.testimonial .owl-nav img {
+    width: 30px;
+}
+
+.gallery {
+    background: #F4F8FF;
+    padding: 50px 0;
+}
+.gallery h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery h2 a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.galleryArea {
+    display: flex;
+    gap: 20px;
+}
+
+.galleryArea .nav {
+    min-width: 140px;
+}
+
+.tabContentWrp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.tabContentWrp img {
+    width: calc(100%/3 - 2px);
+    height: 130px;
+    object-fit: cover;
+}
+
+.galleryArea .nav .nav-link {
+    border: 1px solid #22345B;
+    border-radius: 0px 50px 50px 0px;
+    margin-bottom: 10px;
+    color: #22345B;
+}
+
+.galleryArea .nav .nav-link.active {
+    color: #fff;
+    background: #22345B;
+}
+.galleryThumb {
+    box-shadow: 0px 17.3519px 9.71706px -12.4934px rgba(0, 0, 0, 0.25);
+}
+
+.mainFooter {
+    padding: 50px 0 10px;
+    background: url(../images/footer-bg.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.footerLogo > img {
+    width: 100px;
+}
+
+.footerLogo p {
+    color: #fff;
+    margin: 15px 0;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.footerLogo .d-flex {
+    gap: 15px;
+    color: #fff;
+}
+
+.footerLogo .d-flex img {
+    width: 25px;
+}
+
+.footerLinks h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: solid 1px #fff;
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+}
+
+.fLists {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.fLists li {
+    color: #fff;
+}
+
+.fLists li a {
+    color: #E8E8E8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.subList {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.copyright {
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.footerLinks {
+    padding: 0 35px;
+    border-left: solid 1px #fff;
+}
